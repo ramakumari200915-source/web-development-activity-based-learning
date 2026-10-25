@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verdant Stay - Hotel Reservations</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f6f9f6;
+            color: #24352c;
+        }
+
+        header {
+            background: #173e32;
+            color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            color: #d8c28c;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px;
+        }
+
+        nav a:hover {
+            color: #d8c28c;
+        }
+
+        .hero {
+            padding: 85px 8%;
+            color: white;
+            background: linear-gradient(
+                90deg, #14372fe8, #14372f45
+            ), url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1400&q=80') center/cover;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            max-width: 650px;
+        }
+
+        .hero p {
+            max-width: 550px;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #d8c28c;
+            color: #173e32;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        section {
+            padding: 50px 7%;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(230px, 1fr)
+            );
+            gap: 23px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px #173e3212;
+        }
+
+        .card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content p {
+            color: #718077;
+            line-height: 1.7;
+        }
+
+        .price {
+            color: #24674f;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .features {
+            background: #e8f0e9;
+            padding: 22px;
+            border-radius: 8px;
+        }
+
+        form {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px #173e3210;
+        }
+
+        .fields {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(190px, 1fr)
+            );
+            gap: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 17px;
+            border: 1px solid #d5dfd8;
+            border-radius: 5px;
+            font: inherit;
+        }
+
+        footer {
+            background: #173e32;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Verdant Stay</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#rooms">Rooms</a>
+            <a href="#facilities">Facilities</a>
+            <a href="#booking">Book Now</a>
+        </nav>
+    </header>
+
+    <div class="hero" id="home">
+        <h1>Experience Comfort and Luxury</h1>
+
+        <p>
+            Discover elegant rooms, thoughtful hospitality
+            and relaxing spaces for a memorable stay.
+        </p>
+
+        <a href="#rooms" class="btn">Explore Our Rooms</a>
+    </div>
+
+    <section id="rooms">
+        <div class="heading">
+            <h2>Our Room Categories</h2>
+            <p>Find the perfect room for your stay.</p>
+        </div>
+
+        <div class="grid">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=700&q=80"
+                     alt="Deluxe hotel room">
+
+                <div class="content">
+                    <h3>Deluxe Room</h3>
+                    <p>
+                        A comfortable bedroom with modern interiors
+                        and a relaxing atmosphere.
+                    </p>
+                    <p>Wi-Fi · Air Conditioning · Breakfast</p>
+                    <div class="price">₹3,499 / night</div>
+                    <br>
+                    <a href="#booking" class="btn">Book Room</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=700&q=80"
+                     alt="Executive hotel suite">
+
+                <div class="content">
+                    <h3>Executive Suite</h3>
+                    <p>
+                        A spacious suite with premium interiors
+                        and a separate seating area.
+                    </p>
+                    <p>Wi-Fi · Lounge · Breakfast</p>
+                    <div class="price">₹5,999 / night</div>
+                    <br>
+                    <a href="#booking" class="btn">Book Room</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=700&q=80"
+                     alt="Luxury hotel suite">
+
+                <div class="content">
+                    <h3>Luxury Suite</h3>
+                    <p>
+                        An elegant room offering extra space
+                        and a premium stay experience.
+                    </p>
+                    <p>Wi-Fi · Bathtub · Breakfast</p>
+                    <div class="price">₹8,499 / night</div>
+                    <br>
+                    <a href="#booking" class="btn">Book Room</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="facilities" style="background:#e8f0e9;">
+        <div class="heading">
+            <h2>Hotel Facilities</h2>
+            <p>Enjoy comfort and convenience throughout your stay.</p>
+        </div>
+
+        <div class="grid">
+            <div class="features">
+                <h3>Wellness Centre</h3>
+                <p>Relax in peaceful spaces and enjoy wellness facilities.</p>
+            </div>
+
+            <div class="features">
+                <h3>Restaurant</h3>
+                <p>Enjoy delicious meals and a variety of dining options.</p>
+            </div>
+
+            <div class="features">
+                <h3>Modern Amenities</h3>
+                <p>Stay connected with Wi-Fi and convenient parking.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking">
+        <div class="heading">
+            <h2>Reserve Your Stay</h2>
+            <p>Enter your details and preferred dates.</p>
+        </div>
+
+        <form action="#" method="get">
+            <div class="fields">
+                <div>
+                    <label for="name">Guest Name</label>
+                    <input type="text" id="name"
+                           name="name" required>
+                </div>
+
+                <div>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email"
+                           name="email" required>
+                </div>
+
+                <div>
+                    <label for="checkin">Check-in Date</label>
+                    <input type="date" id="checkin"
+                           name="checkin" required>
+                </div>
+
+                <div>
+                    <label for="checkout">Check-out Date</label>
+                    <input type="date" id="checkout"
+                           name="checkout" required>
+                </div>
+
+                <div>
+                    <label for="room">Room Category</label>
+                    <select id="room" name="room">
+                        <option>Deluxe Room</option>
+                        <option>Executive Suite</option>
+                        <option>Luxury Suite</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="guests">Number of Guests</label>
+                    <select id="guests" name="guests">
+                        <option>1 Guest</option>
+                        <option selected>2 Guests</option>
+                        <option>3 Guests</option>
+                        <option>4 Guests</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="btn">
+                Request Reservation
+            </button>
+
+            <p style="font-size:12px; color:#718077;">
+                Sample website: actual reservations require
+                a booking system and backend.
+            </p>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 Verdant Stay Hotel</p>
+        <p>Comfort, Crafted Around You.</p>
+    </footer>
+
+</body>
+</html>

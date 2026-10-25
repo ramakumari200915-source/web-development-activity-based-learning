@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderWay - Travel Agency</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #172b46;
+        }
+
+        header {
+            background: #10243d;
+            color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            color: #f1cb80;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px;
+        }
+
+        nav a:hover {
+            color: #f1cb80;
+        }
+
+        .hero {
+            padding: 90px 8%;
+            color: white;
+            background: linear-gradient(
+                90deg, #10243de8, #10243d55
+            ), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=80') center/cover;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            max-width: 600px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            line-height: 1.7;
+            max-width: 550px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #f1cb80;
+            color: #10243d;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        section {
+            padding: 50px 7%;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(230px, 1fr)
+            );
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px #00000012;
+        }
+
+        .card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .price {
+            color: #a87615;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        form {
+            max-width: 750px;
+            margin: auto;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .fields {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(200px, 1fr)
+            );
+            gap: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccd5e0;
+            border-radius: 5px;
+            font: inherit;
+        }
+
+        footer {
+            background: #10243d;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">WanderWay</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#packages">Packages</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero" id="home">
+        <h1>Discover Your Next Adventure</h1>
+
+        <p>
+            Explore beautiful destinations, unforgettable
+            experiences and exciting holiday packages.
+        </p>
+
+        <a href="#packages" class="btn">
+            Explore Packages
+        </a>
+    </div>
+
+    <section id="packages">
+        <div class="heading">
+            <h2>Popular Holiday Packages</h2>
+            <p>Choose your favourite destination.</p>
+        </div>
+
+        <div class="grid">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=700&q=80"
+                     alt="Maldives beach">
+
+                <div class="content">
+                    <h3>Maldives Escape</h3>
+                    <p>Beautiful beaches and relaxing island stays.</p>
+                    <p>Duration: 4 Days / 3 Nights</p>
+                    <div class="price">₹29,999</div>
+                    <br>
+                    <a href="#contact" class="btn">Enquire Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=700&q=80"
+                     alt="Mountain destination">
+
+                <div class="content">
+                    <h3>Manali Adventure</h3>
+                    <p>Enjoy mountain views and scenic valleys.</p>
+                    <p>Duration: 5 Days / 4 Nights</p>
+                    <div class="price">₹14,499</div>
+                    <br>
+                    <a href="#contact" class="btn">Enquire Now</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=700&q=80"
+                     alt="Tropical Bali scenery">
+
+                <div class="content">
+                    <h3>Bali Discovery</h3>
+                    <p>Explore temples, culture and tropical beauty.</p>
+                    <p>Duration: 6 Days / 5 Nights</p>
+                    <div class="price">₹34,999</div>
+                    <br>
+                    <a href="#contact" class="btn">Enquire Now</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" style="background:#e8eef6;">
+        <div class="heading">
+            <h2>Why Choose WanderWay?</h2>
+        </div>
+
+        <div class="grid">
+            <div>
+                <h3>Personalised Trips</h3>
+                <p>Travel plans designed around your interests.</p>
+            </div>
+
+            <div>
+                <h3>Beautiful Destinations</h3>
+                <p>Discover memorable places around the world.</p>
+            </div>
+
+            <div>
+                <h3>Easy Planning</h3>
+                <p>Explore packages, durations and prices easily.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="heading">
+            <h2>Plan Your Trip</h2>
+            <p>Fill in your details to enquire about a holiday.</p>
+        </div>
+
+        <form action="#" method="get">
+            <div class="fields">
+                <div>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name"
+                           name="name" required>
+                </div>
+
+                <div>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email"
+                           name="email" required>
+                </div>
+
+                <div>
+                    <label for="destination">Destination</label>
+                    <select id="destination" name="destination">
+                        <option>Maldives</option>
+                        <option>Manali</option>
+                        <option>Bali</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="date">Travel Date</label>
+                    <input type="date" id="date"
+                           name="date" required>
+                </div>
+            </div>
+
+            <label for="message">Your Requirements</label>
+            <textarea id="message" name="message"
+                      rows="3"></textarea>
+
+            <button type="submit" class="btn">
+                Submit Inquiry
+            </button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 WanderWay Travel Agency</p>
+        <p>Explore More. Travel Better.</p>
+    </footer>
+
+</body>
+</html>

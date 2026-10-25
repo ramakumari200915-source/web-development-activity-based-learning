@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incredible Bharat - Tourism</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fffaf3;
+            color: #402b22;
+        }
+
+        header {
+            background: #472b24;
+            color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            color: #f2c078;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px;
+        }
+
+        nav a:hover {
+            color: #f2c078;
+        }
+
+        .hero {
+            padding: 80px 8%;
+            color: white;
+            background: linear-gradient(
+                90deg, #321a15e8, #321a1540
+            ), url('https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1400&q=80') center/cover;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            max-width: 650px;
+        }
+
+        .hero p {
+            max-width: 570px;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #b95735;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 50px 7%;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(230px, 1fr)
+            );
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #efdfd0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 18px;
+        }
+
+        .content h3 {
+            color: #733a29;
+        }
+
+        .content p {
+            color: #76665c;
+            line-height: 1.7;
+        }
+
+        .label {
+            color: #b95735;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .info {
+            background: #f5e7d7;
+            padding: 22px;
+            border-radius: 8px;
+        }
+
+        .info p {
+            line-height: 1.7;
+            color: #76665c;
+        }
+
+        footer {
+            background: #472b24;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Incredible Bharat</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#places">Destinations</a>
+            <a href="#culture">Culture</a>
+            <a href="#food">Cuisine</a>
+            <a href="#tips">Travel Tips</a>
+        </nav>
+    </header>
+
+    <div class="hero" id="home">
+        <h1>Discover India's Timeless Heritage</h1>
+
+        <p>
+            Explore historic monuments, colourful festivals,
+            traditional cuisine and the incredible beauty of India.
+        </p>
+
+        <a href="#places" class="btn">Explore India</a>
+    </div>
+
+    <section id="places">
+        <div class="heading">
+            <h2>Famous Tourist Destinations</h2>
+            <p>Discover the history and beauty of incredible India.</p>
+        </div>
+
+        <div class="grid">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=700&q=80"
+                     alt="Taj Mahal">
+
+                <div class="content">
+                    <span class="label">NORTH INDIA</span>
+                    <h3>Taj Mahal, Agra</h3>
+                    <p>
+                        A magnificent marble monument famous
+                        for its Mughal architecture.
+                    </p>
+                    <p>Location: Uttar Pradesh</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=700&q=80"
+                     alt="Jaipur heritage architecture">
+
+                <div class="content">
+                    <span class="label">WEST INDIA</span>
+                    <h3>Jaipur, Rajasthan</h3>
+                    <p>
+                        Explore royal palaces, historic forts
+                        and colourful traditional markets.
+                    </p>
+                    <p>Location: Rajasthan</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=700&q=80"
+                     alt="Kerala backwaters">
+
+                <div class="content">
+                    <span class="label">SOUTH INDIA</span>
+                    <h3>Kerala Backwaters</h3>
+                    <p>
+                        Enjoy peaceful waterways, green landscapes
+                        and traditional houseboat experiences.
+                    </p>
+                    <p>Location: Kerala</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=700&q=80"
+                     alt="Historic Indian city">
+
+                <div class="content">
+                    <span class="label">NORTH INDIA</span>
+                    <h3>Varanasi</h3>
+                    <p>
+                        Experience ancient riverside ghats,
+                        local traditions and historic streets.
+                    </p>
+                    <p>Location: Uttar Pradesh</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="culture" style="background:#f5e7d7;">
+        <div class="heading">
+            <h2>Indian Culture and Heritage</h2>
+            <p>Celebrate traditions that connect generations.</p>
+        </div>
+
+        <div class="grid">
+            <div class="info">
+                <h3>Cultural Festivals</h3>
+                <p>
+                    <b>Diwali:</b> The festival of lights.
+                </p>
+                <p>
+                    <b>Holi:</b> The festival of colours.
+                </p>
+                <p>
+                    <b>Onam:</b> Kerala's harvest festival.
+                </p>
+            </div>
+
+            <div class="info">
+                <h3>Historic Monuments</h3>
+                <p>
+                    Discover ancient temples, royal palaces,
+                    forts and architectural wonders.
+                </p>
+            </div>
+
+            <div class="info">
+                <h3>Traditional Arts</h3>
+                <p>
+                    Explore Kalamkari, Madhubani paintings,
+                    pottery and traditional Indian textiles.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="food">
+        <div class="heading">
+            <h2>Flavours of India</h2>
+            <p>Discover the delicious food of different regions.</p>
+        </div>
+
+        <div class="grid">
+            <div class="info">
+                <h3>Andhra Pradesh</h3>
+                <p>Gongura pachadi, pulihora and spicy regional meals.</p>
+            </div>
+
+            <div class="info">
+                <h3>Tamil Nadu</h3>
+                <p>Idli, dosa, sambar and traditional filter coffee.</p>
+            </div>
+
+            <div class="info">
+                <h3>Punjab</h3>
+                <p>Chole bhature, makki di roti and sarson da saag.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tips" style="background:#f5e7d7;">
+        <div class="heading">
+            <h2>Responsible Travel Tips</h2>
+        </div>
+
+        <div class="grid">
+            <div class="info">
+                <h3>Respect Traditions</h3>
+                <p>Follow local customs and respect religious places.</p>
+            </div>
+
+            <div class="info">
+                <h3>Plan Your Journey</h3>
+                <p>Check weather, timings and entry fees before travelling.</p>
+            </div>
+
+            <div class="info">
+                <h3>Protect Heritage</h3>
+                <p>Keep tourist destinations clean and protect monuments.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Incredible Bharat Tourism</p>
+        <p>Celebrating India's Heritage and Culture</p>
+    </footer>
+
+</body>
+</html>
